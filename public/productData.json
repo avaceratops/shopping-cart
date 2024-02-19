@@ -1,0 +1,206 @@
+{
+  "warhammer-40k": [
+    {
+      "id": "00001",
+      "name": "Norn Emissary",
+      "price": 7000,
+      "faction": "Tyranids",
+      "image": "/images/warhammer-40k/https___trade.games-workshop.com_assets_2023_08_99120106064_NornAssimilatorStock.jpg",
+      "sku": 99120106064,
+      "stock": 10,
+      "sold": 0
+    },
+    {
+      "id": "00002",
+      "name": "Commander Dante",
+      "price": 2750,
+      "faction": "Blood Angels",
+      "image": "/images/warhammer-40k/https___trade.games-workshop.com_assets_2023_04_TR-41-40-99120101395-Blood Angels Commander Dante.jpg",
+      "sku": 99120101395,
+      "stock": 0,
+      "sold": 0
+    },
+    {
+      "id": "00003",
+      "name": "Lion El'Jonson",
+      "price": 4250,
+      "faction": "Dark Angels",
+      "image": "/images/warhammer-40k/https___trade.games-workshop.com_assets_2023_07_99120101378_DALionElJohnsonStock.jpg",
+      "sku": 99120101378,
+      "stock": 4,
+      "sold": 0
+    },
+    {
+      "id": "00004",
+      "name": "Commander Farsight",
+      "price": 4000,
+      "faction": "T'au Empire",
+      "image": "/images/warhammer-40k/https___trade.games-workshop.com_assets_2023_07_99120113086_TAUEmpCommanderFarsight08.jpg",
+      "sku": 99120113086,
+      "stock": 7,
+      "sold": 0
+    },
+    {
+      "id": "00005",
+      "name": "Szarekh, the Silent King",
+      "price": 10000,
+      "faction": "Necrons",
+      "image": "/images/warhammer-40k/https___trade.games-workshop.com_assets_2020_10_TR-49-26-99120110047-Necrons- Szarekh the  Silent King.jpg",
+      "sku": 99120110047,
+      "stock": 3,
+      "sold": 0
+    },
+    {
+      "id": "00006",
+      "name": "Angron",
+      "price": 10000,
+      "faction": "World Eaters",
+      "image": "/images/warhammer-40k/https___trade.games-workshop.com_assets_2023_02_99120102152_AngronDaemonPrimarchStock.jpg",
+      "sku": 99120102152,
+      "stock": 2,
+      "sold": 0
+    },
+    {
+      "id": "00007",
+      "name": "Magnus the Red",
+      "price": 10000,
+      "faction": "Thousand Sons",
+      "image": "/images/warhammer-40k/https___trade.games-workshop.com_assets_2021_09_EB200a-34-99-99020102132-THOUSAND SONS MAGNUS THE RED.jpg",
+      "sku": 99120102132,
+      "stock": 5,
+      "sold": 0
+    },
+    {
+      "id": "00008",
+      "name": "Ufthak Blackhawk",
+      "price": 2750,
+      "faction": "Orks",
+      "image": "/images/warhammer-40k/https___trade.games-workshop.com_assets_2024_02_TR-50-65-99120103116-Black Library Miniature Orks Ufthak Blackhawk.jpg",
+      "sku": 99120103116,
+      "stock": 9,
+      "sold": 0
+    },
+    {
+      "id": "00009",
+      "name": "Avatar of Khaine",
+      "price": 6500,
+      "faction": "Aeldari",
+      "image": "/images/warhammer-40k/https___trade.games-workshop.com_assets_2022_03_99120104072_AELAvatarofKhaineStock.jpg",
+      "sku": 99120104072,
+      "stock": 0,
+      "sold": 0
+    },
+    {
+      "id": "00010",
+      "name": "Rogal Dorn Battle Tank",
+      "price": 6000,
+      "faction": "Astra Militarum",
+      "image": "/images/warhammer-40k/https___trade.games-workshop.com_assets_2023_01_99120105098_AMRogalDornBattleTankStock.jpg",
+      "sku": 99120105098,
+      "stock": 6,
+      "sold": 0
+    }
+  ],
+  "aos": [
+    {
+      "id": "00001",
+      "name": "Be'lakor",
+      "price": 9500,
+      "faction": "Slaves to Darkness",
+      "image": "/images/aos/https___trade.games-workshop.com_assets_2023_02_EB200a-97-19-99129915070-Belakor The Dark Master.jpg",
+      "sku": 99129915070,
+      "stock": 0,
+      "sold": 0
+    },
+    {
+      "id": "00002",
+      "name": "Kroxigor",
+      "price": 3750,
+      "faction": "Seraphon",
+      "image": "/images/aos/https___trade.games-workshop.com_assets_2023_05_99120208032_SERKroxigorStock.jpg",
+      "sku": 99120208032,
+      "stock": 4,
+      "sold": 0
+    },
+    {
+      "id": "00003",
+      "name": "Aggradon Lancers",
+      "price": 3750,
+      "faction": "Seraphon",
+      "image": "/images/aos/https___trade.games-workshop.com_assets_2023_05_99120208034_AggradonLancersStock.jpg",
+      "sku": 99120208034,
+      "stock": 9,
+      "sold": 0
+    },
+    {
+      "id": "00004",
+      "name": "Belthanos",
+      "price": 6500,
+      "faction": "Sylvaneth",
+      "image": "/images/aos/https___trade.games-workshop.com_assets_2024_01_TR-92-29-99120204044-Syvaneth Belthanos First Thron of Kurnoth.jpg",
+      "sku": 99120204044,
+      "stock": 3,
+      "sold": 0
+    },
+    {
+      "id": "00005",
+      "name": "Spiterider Lancers",
+      "price": 4000,
+      "faction": "Sylvaneth",
+      "image": "/images/aos/https___trade.games-workshop.com_assets_2022_06_99120204031_SpiteriderLancersStock.jpg",
+      "sku": 99120204031,
+      "stock": 8,
+      "sold": 0
+    },
+    {
+      "id": "00006",
+      "name": "Black Coach",
+      "price": 8500,
+      "faction": "Nighthaunt",
+      "image": "/images/aos/https___trade.games-workshop.com_assets_2022_05_TR-91-22-99120207118-Nighthaunt Black Coach.jpg",
+      "sku": 99120207118,
+      "stock": 5,
+      "sold": 0
+    },
+    {
+      "id": "00007",
+      "name": "Nagash",
+      "price": 8500,
+      "faction": "Ossiarch Bonereapers",
+      "image": "/images/aos/https___trade.games-workshop.com_assets_2023_03_TR-93-05-99120207157-Deathlords Nagash Lord of Undead.jpg",
+      "sku": 99120207157,
+      "stock": 8,
+      "sold": 0
+    },
+    {
+      "id": "00008",
+      "name": "Verminlord Corruptor",
+      "price": 7000,
+      "faction": "Skaven",
+      "image": "/images/aos/https___trade.games-workshop.com_assets_2022_08_TR-90-21-99120206038-Skaven Verminlord Corruptor.jpg",
+      "sku": 99120206038,
+      "stock": 9,
+      "sold": 0
+    },
+    {
+      "id": "00009",
+      "name": "King Brodd",
+      "price": 13000,
+      "faction": "Sons of Behemat",
+      "image": "/images/aos/https___trade.games-workshop.com_assets_2022_10_99120299086_BroddStock.jpg",
+      "sku": 99120299086,
+      "stock": 0,
+      "sold": 0
+    },
+    {
+      "id": "00010",
+      "name": "Orruk Ardboys",
+      "price": 3750,
+      "faction": "Orruk Warclans",
+      "image": "/images/aos/https___trade.games-workshop.com_assets_2023_09_99120209110_ORRArdboyz07.jpg",
+      "sku": 99120209110,
+      "stock": 10,
+      "sold": 0
+    }
+  ]
+}
