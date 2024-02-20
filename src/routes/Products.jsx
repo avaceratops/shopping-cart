@@ -8,6 +8,7 @@ export default function Products() {
   const { game } = useParams();
   const { data, isLoading } = useOutletContext();
   const gameProducts = data[game];
+  const sortedProducts = gameProducts?.sort(sortByAvailability);
 
   if (isLoading) {
     return <LoadingSpinner />;
@@ -17,13 +18,11 @@ export default function Products() {
     return <ErrorMessage />;
   }
 
-  const sortedProducts = gameProducts.sort(sortByAvailability);
-
   return (
     <>
       <section className="flex flex-wrap gap-5">
         {sortedProducts.map((product) => (
-          <ProductCard key={product.id} props={product} />
+          <ProductCard key={product.id} product={product} />
         ))}
       </section>
     </>
