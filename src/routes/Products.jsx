@@ -20,7 +20,10 @@ export default function Products() {
 
   return (
     <>
-      <section className="flex flex-wrap gap-5">
+      <section
+        className="xs:grid-cols-2 grid grid-cols-1 gap-5 sm:grid-cols-3 md:grid-cols-4
+          lg:grid-cols-5"
+      >
         {sortedProducts.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}

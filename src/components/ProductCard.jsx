@@ -16,16 +16,10 @@ export default function ProductCard({ props }) {
   return (
     <Link to={`/${game}/${id}`}>
       <article
-        className="flex h-full w-48 flex-col rounded border p-3 shadow-sm hover:border-gray-400
+        className="flex flex-col rounded border p-3 shadow-sm hover:border-gray-400
           hover:shadow-lg"
       >
-        <img
-          className="mb-auto"
-          height={171}
-          width={166}
-          src={image || '/images/200.svg'}
-          alt=""
-        ></img>
+        <img className="mb-auto" src={image || '/images/200.svg'} alt=""></img>
         <p className="mt-4 text-xl font-bold text-indigo-500">{formatPrice(price)}</p>
         <h2 className="font-semibold">{faction || 'Unknown'}</h2>
         <h3 className="mb-4">{name || 'Placeholder'}</h3>
