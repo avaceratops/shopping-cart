@@ -2,13 +2,18 @@ import { useNavigate, useOutletContext, useParams } from 'react-router-dom';
 import { formatPrice } from '../utils/formatting';
 import AddProductButton from '../components/AddProductButton';
 import ErrorMessage from '../components/ErrorMessage';
+import LoadingSpinner from '../components/LoadingSpinner';
 import StockIndicator from '../components/StockIndicator';
 
 export default function Product() {
-  const { game, productId } = useParams();
   const navigate = useNavigate();
-  const products = useOutletContext();
-  const product = products[game]?.find((p) => p.id === productId);
+  const { game, productId } = useParams();
+  const { data, isLoading } = useOutletContext();
+  const product = data[game]?.find((p) => p.id === productId);
+
+  if (isLoading) {
+    return <LoadingSpinner />;
+  }
 
   if (!product) {
     return <ErrorMessage />;

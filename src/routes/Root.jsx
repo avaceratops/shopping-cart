@@ -10,16 +10,12 @@ export default function Root() {
     return <p>Unable to load product data. Please try refreshing the page.</p>;
   }
 
-  if (isLoading) {
-    return <p>Loading...</p>;
-  }
-
   return (
     <>
       <Header />
       <main className="px-5 py-14">
         <ScrollRestoration />
-        <Outlet context={data} />
+        <Outlet context={{ data, isLoading }} />
       </main>
       <Footer />
     </>

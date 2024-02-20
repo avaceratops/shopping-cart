@@ -1,12 +1,17 @@
 import { useOutletContext, useParams } from 'react-router-dom';
 import { sortByAvailability } from '../utils/products';
 import ErrorMessage from '../components/ErrorMessage';
+import LoadingSpinner from '../components/LoadingSpinner';
 import ProductCard from '../components/ProductCard';
 
 export default function Products() {
   const { game } = useParams();
-  const products = useOutletContext();
-  const gameProducts = products[game];
+  const { data, isLoading } = useOutletContext();
+  const gameProducts = data[game];
+
+  if (isLoading) {
+    return <LoadingSpinner />;
+  }
 
   if (!gameProducts) {
     return <ErrorMessage />;
