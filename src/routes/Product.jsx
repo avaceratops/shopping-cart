@@ -45,7 +45,9 @@ export default function Product() {
             <span className="font-semibold text-black">Availability: </span>
             <StockIndicator stock={stock} />
           </p>
-          <AddProductButton stock={stock} />
+          <div className="max-w-72">
+            <AddProductButton stock={stock} />
+          </div>
         </section>
       </section>
     </main>
