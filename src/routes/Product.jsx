@@ -8,7 +8,7 @@ import StockIndicator from '../components/StockIndicator';
 export default function Product() {
   const navigate = useNavigate();
   const { game, productId } = useParams();
-  const { data, isLoading } = useOutletContext();
+  const { data, isLoading, addToCart } = useOutletContext();
   const product = data[game]?.find((p) => p.id === productId);
 
   if (isLoading) {
@@ -20,6 +20,10 @@ export default function Product() {
   }
 
   const { name, price, faction, image, sku, stock } = product;
+
+  const handleClick = () => {
+    addToCart(product, 1);
+  };
 
   return (
     <main>
@@ -46,7 +50,7 @@ export default function Product() {
             <StockIndicator stock={stock} />
           </p>
           <div className="max-w-72">
-            <AddProductButton stock={stock} />
+            <AddProductButton stock={stock} onClick={handleClick} />
           </div>
         </section>
       </section>
