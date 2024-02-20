@@ -43,7 +43,7 @@ export default function Root() {
 
   return (
     <>
-      <Header />
+      <Header cart={cart} />
       <main className="px-5 py-14">
         <ScrollRestoration />
         <Outlet

@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import CartButton from './CartButton';
 import '../styles/Header.scss';
 
-export default function Header() {
+export default function Header({ cart }) {
   return (
     <header className="px-5">
       <div className="border-b border-gray-200">
@@ -24,7 +24,7 @@ export default function Header() {
             </NavLink>
           </ul>
           <section className="flex flex-1 justify-end">
-            <CartButton />
+            <CartButton cart={cart} />
           </section>
         </nav>
       </div>
