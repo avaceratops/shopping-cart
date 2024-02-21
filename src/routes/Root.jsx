@@ -43,12 +43,15 @@ export default function Root() {
 
   return (
     <>
-      <Header cart={cart} />
+      <Header
+        cart={cart}
+        updateCartItem={updateCartItem}
+        removeFromCart={removeFromCart}
+        clearCart={clearCart}
+      />
       <main className="px-5 py-14">
         <ScrollRestoration />
-        <Outlet
-          context={{ data, isLoading, addToCart, updateCartItem, removeFromCart, clearCart }}
-        />
+        <Outlet context={{ data, isLoading, addToCart }} />
       </main>
       <Footer />
     </>
