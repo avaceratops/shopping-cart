@@ -8,7 +8,7 @@
       "image": "/images/warhammer-40k/https___trade.games-workshop.com_assets_2023_08_99120106064_NornAssimilatorStock.jpg",
       "sku": 99120106064,
       "stock": 10,
-      "sold": 0
+      "sold": 48
     },
     {
       "id": "00002",
@@ -18,7 +18,7 @@
       "image": "/images/warhammer-40k/https___trade.games-workshop.com_assets_2023_04_TR-41-40-99120101395-Blood Angels Commander Dante.jpg",
       "sku": 99120101395,
       "stock": 0,
-      "sold": 0
+      "sold": 49
     },
     {
       "id": "00003",
@@ -28,7 +28,7 @@
       "image": "/images/warhammer-40k/https___trade.games-workshop.com_assets_2023_07_99120101378_DALionElJohnsonStock.jpg",
       "sku": 99120101378,
       "stock": 4,
-      "sold": 0
+      "sold": 28
     },
     {
       "id": "00004",
@@ -38,7 +38,7 @@
       "image": "/images/warhammer-40k/https___trade.games-workshop.com_assets_2023_07_99120113086_TAUEmpCommanderFarsight08.jpg",
       "sku": 99120113086,
       "stock": 7,
-      "sold": 0
+      "sold": 21
     },
     {
       "id": "00005",
@@ -48,7 +48,7 @@
       "image": "/images/warhammer-40k/https___trade.games-workshop.com_assets_2020_10_TR-49-26-99120110047-Necrons- Szarekh the  Silent King.jpg",
       "sku": 99120110047,
       "stock": 3,
-      "sold": 0
+      "sold": 35
     },
     {
       "id": "00006",
@@ -58,7 +58,7 @@
       "image": "/images/warhammer-40k/https___trade.games-workshop.com_assets_2023_02_99120102152_AngronDaemonPrimarchStock.jpg",
       "sku": 99120102152,
       "stock": 2,
-      "sold": 0
+      "sold": 30
     },
     {
       "id": "00007",
@@ -68,7 +68,7 @@
       "image": "/images/warhammer-40k/https___trade.games-workshop.com_assets_2021_09_EB200a-34-99-99020102132-THOUSAND SONS MAGNUS THE RED.jpg",
       "sku": 99120102132,
       "stock": 5,
-      "sold": 0
+      "sold": 50
     },
     {
       "id": "00008",
@@ -78,7 +78,7 @@
       "image": "/images/warhammer-40k/https___trade.games-workshop.com_assets_2024_02_TR-50-65-99120103116-Black Library Miniature Orks Ufthak Blackhawk.jpg",
       "sku": 99120103116,
       "stock": 9,
-      "sold": 0
+      "sold": 25
     },
     {
       "id": "00009",
@@ -88,7 +88,7 @@
       "image": "/images/warhammer-40k/https___trade.games-workshop.com_assets_2022_03_99120104072_AELAvatarofKhaineStock.jpg",
       "sku": 99120104072,
       "stock": 0,
-      "sold": 0
+      "sold": 20
     },
     {
       "id": "00010",
@@ -98,7 +98,7 @@
       "image": "/images/warhammer-40k/https___trade.games-workshop.com_assets_2023_01_99120105098_AMRogalDornBattleTankStock.jpg",
       "sku": 99120105098,
       "stock": 6,
-      "sold": 0
+      "sold": 50
     }
   ],
   "age-of-sigmar": [
@@ -110,7 +110,7 @@
       "image": "/images/aos/https___trade.games-workshop.com_assets_2023_02_EB200a-97-19-99129915070-Belakor The Dark Master.jpg",
       "sku": 99129915070,
       "stock": 0,
-      "sold": 0
+      "sold": 49
     },
     {
       "id": "10002",
@@ -120,7 +120,7 @@
       "image": "/images/aos/https___trade.games-workshop.com_assets_2023_05_99120208032_SERKroxigorStock.jpg",
       "sku": 99120208032,
       "stock": 4,
-      "sold": 0
+      "sold": 50
     },
     {
       "id": "10003",
@@ -130,7 +130,7 @@
       "image": "/images/aos/https___trade.games-workshop.com_assets_2023_05_99120208034_AggradonLancersStock.jpg",
       "sku": 99120208034,
       "stock": 9,
-      "sold": 0
+      "sold": 33
     },
     {
       "id": "10004",
@@ -140,7 +140,7 @@
       "image": "/images/aos/https___trade.games-workshop.com_assets_2024_01_TR-92-29-99120204044-Syvaneth Belthanos First Thron of Kurnoth.jpg",
       "sku": 99120204044,
       "stock": 3,
-      "sold": 0
+      "sold": 37
     },
     {
       "id": "10005",
@@ -150,7 +150,7 @@
       "image": "/images/aos/https___trade.games-workshop.com_assets_2022_06_99120204031_SpiteriderLancersStock.jpg",
       "sku": 99120204031,
       "stock": 8,
-      "sold": 0
+      "sold": 40
     },
     {
       "id": "10006",
@@ -160,7 +160,7 @@
       "image": "/images/aos/https___trade.games-workshop.com_assets_2022_05_TR-91-22-99120207118-Nighthaunt Black Coach.jpg",
       "sku": 99120207118,
       "stock": 5,
-      "sold": 0
+      "sold": 24
     },
     {
       "id": "10007",
@@ -170,7 +170,7 @@
       "image": "/images/aos/https___trade.games-workshop.com_assets_2023_03_TR-93-05-99120207157-Deathlords Nagash Lord of Undead.jpg",
       "sku": 99120207157,
       "stock": 8,
-      "sold": 0
+      "sold": 34
     },
     {
       "id": "10008",
@@ -180,7 +180,7 @@
       "image": "/images/aos/https___trade.games-workshop.com_assets_2022_08_TR-90-21-99120206038-Skaven Verminlord Corruptor.jpg",
       "sku": 99120206038,
       "stock": 9,
-      "sold": 0
+      "sold": 47
     },
     {
       "id": "10009",
@@ -190,7 +190,7 @@
       "image": "/images/aos/https___trade.games-workshop.com_assets_2022_10_99120299086_BroddStock.jpg",
       "sku": 99120299086,
       "stock": 0,
-      "sold": 0
+      "sold": 39
     },
     {
       "id": "10010",
@@ -200,7 +200,7 @@
       "image": "/images/aos/https___trade.games-workshop.com_assets_2023_09_99120209110_ORRArdboyz07.jpg",
       "sku": 99120209110,
       "stock": 10,
-      "sold": 0
+      "sold": 32
     }
   ]
 }
