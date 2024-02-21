@@ -34,7 +34,7 @@ export default function Product() {
   };
 
   return (
-    <main>
+    <>
       <button
         className="mb-4 rounded bg-gray-500 px-8 py-2 text-sm font-bold text-white hover:bg-gray-400
           focus:outline-none focus:ring focus:ring-gray-400/50"
@@ -70,6 +70,6 @@ export default function Product() {
           </div>
         </section>
       </section>
-    </main>
+    </>
   );
 }
