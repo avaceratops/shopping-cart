@@ -6,7 +6,7 @@ import styles from '../styles/NavLink.module.scss';
 
 export default function Header({ cart, updateCartItem, removeFromCart, clearCart }) {
   return (
-    <header className="sticky top-0 bg-white/90 px-5 backdrop-blur">
+    <header className="sticky top-0 w-full max-w-7xl bg-white/90 px-5 backdrop-blur">
       <div className="border-b border-gray-200">
         <nav className="flex h-16 items-center justify-between text-gray-700">
           <section className="flex flex-1 md:hidden">
