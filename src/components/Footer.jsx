@@ -21,7 +21,7 @@ export default function Footer() {
       </section>
 
       <section className="max-w-prose">
-        <h2 className="mb-2 font-bold text-gray-300">Reasons to shop with us</h2>
+        <h2 className="mb-2 mt-8 font-bold text-gray-300 lg:mt-0">Reasons to shop with us</h2>
         <p>Friendly Staff</p>
         <p>Quick Shipping</p>
         <p>Free UK Shipping on Orders Over £50</p>
