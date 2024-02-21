@@ -1,0 +1,10 @@
+.select {
+  @apply rounded-md border py-1.5 pl-3 pr-10 font-medium text-gray-700 shadow-sm;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('/images/chevron.svg');
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+}
