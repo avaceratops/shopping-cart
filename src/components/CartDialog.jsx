@@ -76,9 +76,9 @@ export default function CartDialog({ cart, updateCartItem, removeFromCart }) {
                     <div className="mt-6">
                       <a
                         href="#"
-                        className="flex justify-center rounded border bg-indigo-600 px-6 py-3
-                          font-bold text-white shadow hover:bg-indigo-500 focus:outline-none
-                          focus:ring focus:ring-indigo-500/50"
+                        className="flex justify-center rounded bg-indigo-600 px-6 py-3 font-bold
+                          text-white shadow hover:bg-indigo-500 focus:outline-none focus:ring
+                          focus:ring-indigo-500/50"
                       >
                         Checkout
                       </a>
