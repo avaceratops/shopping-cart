@@ -33,22 +33,13 @@ export default function Root() {
     setCart(newCart);
   }
 
-  function clearCart() {
-    setCart([]);
-  }
-
   if (isError) {
     return <p>Unable to load product data. Please try refreshing the page.</p>;
   }
 
   return (
     <>
-      <Header
-        cart={cart}
-        updateCartItem={updateCartItem}
-        removeFromCart={removeFromCart}
-        clearCart={clearCart}
-      />
+      <Header cart={cart} updateCartItem={updateCartItem} removeFromCart={removeFromCart} />
       <main className="px-5 py-14">
         <ScrollRestoration />
         <Outlet context={{ data, isLoading, addToCart }} />
