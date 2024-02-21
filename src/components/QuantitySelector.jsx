@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import styles from '../styles/QuantitySelector.module.scss';
 
-export default function QuantitySelector({ id, initialValue, maxValue, updateCartItem }) {
+export default function QuantitySelector({ id, initialValue, maxValue, onChange, isCart = false }) {
   const [value, setValue] = useState(initialValue);
 
   const handleChange = (e) => {
     const newValue = Number(e.target.value);
     setValue(newValue);
-    updateCartItem(id, newValue);
+    onChange(newValue);
   };
 
   const options = [];
@@ -19,14 +19,16 @@ export default function QuantitySelector({ id, initialValue, maxValue, updateCar
     );
   }
 
+  const selectId = `${isCart ? 'cart-' : 'quantity-'}${id}`;
+
   return (
     <article>
-      <label htmlFor={`quantity-${id}`} className="sr-only">
+      <label htmlFor={selectId} className="sr-only">
         Quantity
       </label>
       <select
-        id={`quantity-${id}`}
-        name={`quantity-${id}`}
+        id={selectId}
+        name={selectId}
         className={styles.select}
         defaultValue={value}
         onChange={handleChange}
