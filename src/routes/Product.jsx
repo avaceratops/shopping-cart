@@ -1,28 +1,36 @@
+import { useState } from 'react';
 import { useNavigate, useOutletContext, useParams } from 'react-router-dom';
 import { formatPrice } from '../utils/formatting';
 import AddProductButton from '../components/AddProductButton';
 import ErrorMessage from '../components/ErrorMessage';
 import LoadingSpinner from '../components/LoadingSpinner';
 import StockIndicator from '../components/StockIndicator';
+import QuantitySelector from '../components/QuantitySelector';
 
 export default function Product() {
   const navigate = useNavigate();
   const { game, productId } = useParams();
   const { data, isLoading, addToCart } = useOutletContext();
-  const product = data[game]?.find((p) => p.id === productId);
+  const [quantity, setQuantity] = useState(1);
 
   if (isLoading) {
     return <LoadingSpinner />;
   }
 
+  const product = data[game]?.find((p) => p.id === productId);
+
   if (!product) {
     return <ErrorMessage />;
   }
 
-  const { name, price, faction, image, sku, stock } = product;
+  const { id, name, price, faction, image, sku, stock } = product;
 
-  const handleClick = () => {
-    addToCart(product, 1);
+  const handleAddClick = () => {
+    addToCart(product, quantity);
+  };
+
+  const handleQuantityChange = (newValue) => {
+    setQuantity(newValue);
   };
 
   return (
@@ -49,8 +57,16 @@ export default function Product() {
             <span className="font-semibold text-black">Availability: </span>
             <StockIndicator stock={stock} />
           </p>
+          <div className="my-2">
+            <QuantitySelector
+              id={id}
+              initialValue={1}
+              maxValue={stock}
+              onChange={handleQuantityChange}
+            />
+          </div>
           <div className="max-w-72">
-            <AddProductButton stock={stock} onClick={handleClick} />
+            <AddProductButton stock={stock} onClick={handleAddClick} />
           </div>
         </section>
       </section>
