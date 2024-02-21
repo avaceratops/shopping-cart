@@ -5,6 +5,11 @@ import styles from '../styles/QuantitySelector.module.scss';
 export default function QuantitySelector({ id, initialValue, maxValue, onChange, isCart = false }) {
   const [value, setValue] = useState(initialValue);
 
+  // disable rendering if the product is out of stock
+  if (maxValue === 0) {
+    return;
+  }
+
   const handleChange = (e) => {
     const newValue = Number(e.target.value);
     setValue(newValue);
