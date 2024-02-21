@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import { Outlet, ScrollRestoration } from 'react-router-dom';
+import { MAX_PURCHASE_QUANTITY } from '../utils/products';
 import useProductData from '../hooks/useProductData';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-
-export const MAX_PURCHASE_QUANTITY = 8;
 
 export default function Root() {
   const { data, isLoading, isError } = useProductData();

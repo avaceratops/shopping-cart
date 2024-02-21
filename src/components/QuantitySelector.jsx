@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MAX_PURCHASE_QUANTITY } from '../routes/Root';
+import { MAX_PURCHASE_QUANTITY } from '../utils/products';
 import styles from '../styles/QuantitySelector.module.scss';
 
 export default function QuantitySelector({ id, initialValue, maxValue, onChange, isCart = false }) {
