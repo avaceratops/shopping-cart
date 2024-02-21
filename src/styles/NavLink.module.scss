@@ -1,5 +1,5 @@
 .navLink {
-  @apply border-b-2 border-transparent;
+  @apply flex h-full items-center border-b-2 border-transparent;
 
   &:hover {
     @apply text-gray-800;
