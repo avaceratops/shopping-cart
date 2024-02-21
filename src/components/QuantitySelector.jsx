@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { MAX_PURCHASE_QUANTITY } from '../routes/Root';
 import styles from '../styles/QuantitySelector.module.scss';
 
 export default function QuantitySelector({ id, initialValue, maxValue, onChange, isCart = false }) {
@@ -11,7 +12,7 @@ export default function QuantitySelector({ id, initialValue, maxValue, onChange,
   };
 
   const options = [];
-  for (let i = 1; i <= Math.min(maxValue, 8); i++) {
+  for (let i = 1; i <= Math.min(maxValue, MAX_PURCHASE_QUANTITY); i++) {
     options.push(
       <option key={i} value={i}>
         {i}

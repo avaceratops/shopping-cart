@@ -4,6 +4,8 @@ import useProductData from '../hooks/useProductData';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
+export const MAX_PURCHASE_QUANTITY = 8;
+
 export default function Root() {
   const { data, isLoading, isError } = useProductData();
   const [cart, setCart] = useState([]);
@@ -14,7 +16,7 @@ export default function Root() {
     if (index !== -1) {
       // prevent the user from ordering unavailable stock
       const currentQuantity = cart[index].quantity;
-      if (currentQuantity + quantity > product.stock) {
+      if (currentQuantity + quantity > Math.min(product.stock, MAX_PURCHASE_QUANTITY)) {
         return;
       }
 
