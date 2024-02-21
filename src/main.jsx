@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Root from './routes/Root';
+import Home from './routes/Home';
 import Products from './routes/Products';
 import Product from './routes/Product';
 import ErrorMessage from './components/ErrorMessage';
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
     path: '/',
     element: <Root />,
     children: [
+      {
+        path: '/',
+        element: <Home />,
+      },
       {
         path: ':game',
         element: <Products />,
