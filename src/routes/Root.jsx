@@ -14,7 +14,7 @@ export default function Root() {
     if (index !== -1) {
       // prevent the user from ordering unavailable stock
       const currentQuantity = cart[index].quantity;
-      if (currentQuantity === product.stock) {
+      if (currentQuantity + quantity > product.stock) {
         return;
       }
 
