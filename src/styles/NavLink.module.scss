@@ -1,19 +1,19 @@
-nav a {
+.navLink {
   @apply border-b-2 border-transparent;
 
   &:hover {
     @apply text-gray-800;
   }
 
-  &.active {
+  &:global.active {
     @apply border-indigo-600 text-indigo-600;
 
     &:hover {
       @apply text-indigo-700;
     }
   }
+}
 
-  button {
-    @apply h-full;
-  }
+.navButton {
+  @apply h-full;
 }
