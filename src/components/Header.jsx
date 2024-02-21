@@ -1,8 +1,8 @@
 import { NavLink } from 'react-router-dom';
-import CartButton from './CartButton';
+import CartDialog from './CartDialog';
 import '../styles/Header.scss';
 
-export default function Header({ cart }) {
+export default function Header({ cart, updateCartItem, removeFromCart, clearCart }) {
   return (
     <header className="px-5">
       <div className="border-b border-gray-200">
@@ -12,6 +12,7 @@ export default function Header({ cart }) {
               shopping cart
             </h1>
           </section>
+
           <ul className="flex h-full space-x-8 text-sm font-medium">
             <NavLink to="/">
               <button>Home</button>
@@ -23,8 +24,14 @@ export default function Header({ cart }) {
               <button>Age of Sigmar</button>
             </NavLink>
           </ul>
+
           <section className="flex flex-1 justify-end">
-            <CartButton cart={cart} />
+            <CartDialog
+              cart={cart}
+              updateCartItem={updateCartItem}
+              removeFromCart={removeFromCart}
+              clearCart={clearCart}
+            />
           </section>
         </nav>
       </div>
