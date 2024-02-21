@@ -47,8 +47,8 @@ export default function Product() {
           <img src={image}></img>
         </article>
         <section className="flex-grow">
-          <h2 className="text-2xl font-bold">{faction}</h2>
-          <h3 className="text-2xl">{name}</h3>
+          <h2 className="text-2xl font-semibold">{name}</h2>
+          <h3 className="text-xl text-gray-500">{faction}</h3>
           <p className="my-4">
             <span className="font-semibold text-black">Product code:</span> {sku}
           </p>
