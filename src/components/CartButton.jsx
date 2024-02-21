@@ -1,8 +1,6 @@
-export default function CartButton({ cart }) {
-  const totalQuantity = cart.reduce((acc, item) => acc + item.quantity, 0);
-
+export default function CartButton({ totalQuantity, onClick }) {
   return (
-    <button className="group flex items-center p-2">
+    <button className="group flex items-center p-2" onClick={onClick}>
       <span className="sr-only">Cart</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
