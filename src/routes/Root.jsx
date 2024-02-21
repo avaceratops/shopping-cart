@@ -10,7 +10,14 @@ export default function Root() {
 
   function addToCart(product, quantity = 1) {
     const index = cart.findIndex((item) => item.product.id === product.id);
+
     if (index !== -1) {
+      // prevent the user from ordering unavailable stock
+      const currentQuantity = cart[index].quantity;
+      if (currentQuantity === product.stock) {
+        return;
+      }
+
       const newCart = [...cart];
       newCart[index].quantity += quantity;
       setCart(newCart);
