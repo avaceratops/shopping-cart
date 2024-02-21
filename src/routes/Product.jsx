@@ -42,21 +42,26 @@ export default function Product() {
       >
         Back
       </button>
-      <section className="flex gap-6">
-        <article className="basis-7/12 rounded border shadow-sm">
+      <section className="flex flex-col gap-6 sm:flex-row">
+        <article className="flex basis-7/12 items-center rounded border shadow-sm">
           <img src={image}></img>
         </article>
+
         <section className="flex-grow">
           <h2 className="text-2xl font-semibold">{name}</h2>
           <h3 className="text-xl text-gray-500">{faction}</h3>
+
           <p className="my-4">
             <span className="font-semibold text-black">Product code:</span> {sku}
           </p>
+
           <p className="mb-16 text-4xl font-bold text-indigo-500">{formatPrice(price)}</p>
+
           <p>
             <span className="font-semibold text-black">Availability: </span>
             <StockIndicator stock={stock} />
           </p>
+
           <div className="my-2">
             <QuantitySelector
               id={id}
@@ -65,7 +70,8 @@ export default function Product() {
               onChange={handleQuantityChange}
             />
           </div>
-          <div className="max-w-72">
+
+          <div className="xs:max-w-72">
             <AddProductButton stock={stock} onClick={handleAddClick} />
           </div>
         </section>
