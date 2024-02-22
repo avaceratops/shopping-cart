@@ -44,7 +44,7 @@ export default function Product() {
       </button>
       <section className="flex flex-col gap-6 sm:flex-row">
         <article className="flex basis-7/12 items-center rounded border shadow-sm">
-          <img src={image}></img>
+          <img src={image} alt=""></img>
         </article>
 
         <section className="flex-grow">
