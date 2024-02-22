@@ -21,9 +21,11 @@ export default function Header({ cart, updateCartItem, removeFromCart, clearCart
 
           <ul className="hidden h-full space-x-8 text-sm font-medium md:flex">
             {NAVIGATION_LINKS.map((item) => (
-              <NavLink key={item.name} to={item.to} className={styles.navLink}>
-                {item.name}
-              </NavLink>
+              <li key={item.name}>
+                <NavLink to={item.to} className={styles.navLink}>
+                  {item.name}
+                </NavLink>
+              </li>
             ))}
           </ul>
 
