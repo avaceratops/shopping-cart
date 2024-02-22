@@ -48,7 +48,7 @@ export default function Root() {
   return (
     <>
       <Header cart={cart} updateCartItem={updateCartItem} removeFromCart={removeFromCart} />
-      <main className="w-full max-w-7xl px-5 py-10">
+      <main className="w-full max-w-screen-2xl px-5 py-10">
         <ScrollRestoration />
         <Outlet context={{ data, isLoading, addToCart }} />
       </main>

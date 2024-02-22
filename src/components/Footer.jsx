@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="flex w-full justify-center bg-black">
       <div
-        className="flex max-w-7xl flex-1 flex-col justify-between px-5 py-10 text-gray-400
+        className="flex max-w-screen-2xl flex-1 flex-col justify-between px-5 py-10 text-gray-400
           lg:flex-row"
       >
         <section className="max-w-prose">
