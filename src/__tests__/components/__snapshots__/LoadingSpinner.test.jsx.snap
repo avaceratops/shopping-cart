@@ -1,0 +1,15 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders loading spinner correctly 1`] = `
+<div>
+  <div
+    class="grid h-72 place-content-center"
+  >
+    <span
+      aria-label="Loading Spinner"
+      data-testid="loader"
+      style="width: 80px; height: 80px; border-radius: 100%; border: 2px solid; border-top-color: #6366f1; border-bottom-color: transparent; border-left-color: #6366f1; border-right-color: #6366f1; display: inline-block; animation: react-spinners-ClipLoader-clip 0.75s 0s infinite linear; animation-fill-mode: both;"
+    />
+  </div>
+</div>
+`;

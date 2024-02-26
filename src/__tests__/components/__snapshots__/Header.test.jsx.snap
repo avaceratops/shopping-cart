@@ -1,0 +1,119 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders header correctly 1`] = `
+<div>
+  <header
+    class="sticky top-0 z-10 w-full max-w-screen-2xl bg-white/90 px-5 backdrop-blur"
+  >
+    <div
+      class="border-b border-gray-200"
+    >
+      <nav
+        class="flex h-16 items-center justify-between text-gray-700"
+      >
+        <section
+          class="flex flex-1 md:hidden"
+        >
+          <button
+            class="rounded-md p-2 text-gray-400 hover:bg-gray-400 hover:text-white"
+          >
+            <span
+              class="sr-only"
+            >
+              Open Menu
+            </span>
+            <svg
+              aria-hidden="true"
+              class="block h-6 w-6"
+              data-slot="icon"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </section>
+        <section
+          class="hidden xs:block lg:flex-1"
+        >
+          <h1
+            class="text-2xl font-bold leading-none tracking-tight text-black"
+          >
+            shopping cart
+          </h1>
+        </section>
+        <ul
+          class="hidden h-full space-x-8 text-sm font-medium md:flex"
+        >
+          <li>
+            <a
+              aria-current="page"
+              class="_navLink_800479 active"
+              href="/"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              class="_navLink_800479"
+              href="/warhammer-40k"
+            >
+              Warhammer 40,000
+            </a>
+          </li>
+          <li>
+            <a
+              class="_navLink_800479"
+              href="/age-of-sigmar"
+            >
+              Age of Sigmar
+            </a>
+          </li>
+        </ul>
+        <section
+          class="flex flex-1 justify-end md:flex-initial lg:flex-1"
+        >
+          <button
+            class="group flex items-center rounded-md p-2 hover:bg-gray-400 hover:text-white"
+          >
+            <span
+              class="sr-only"
+            >
+              Cart
+            </span>
+            <svg
+              aria-hidden="true"
+              class="block h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-white"
+              data-slot="icon"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span
+              class="ml-2 text-sm font-medium text-gray-800 group-hover:text-white"
+            >
+              0
+            </span>
+          </button>
+        </section>
+      </nav>
+    </div>
+  </header>
+</div>
+`;

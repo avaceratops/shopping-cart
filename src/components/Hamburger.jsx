@@ -15,6 +15,7 @@ export default function Hamburger() {
         className="rounded-md p-2 text-gray-400 hover:bg-gray-400 hover:text-white"
         onClick={() => setOpen(true)}
       >
+        <span className="sr-only">Open Menu</span>
         <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
       </button>
 

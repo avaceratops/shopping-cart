@@ -1,0 +1,110 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders cart item correctly 1`] = `
+<div>
+  <li
+    class="flex py-6"
+  >
+    <div
+      class="h-24 w-24 flex-shrink-0 overflow-hidden rounded border"
+    >
+      <img
+        alt=""
+        class="h-full w-full object-cover object-center"
+        src="/images/warhammer-40k/https___trade.games-workshop.com_assets_2023_08_99120106064_NornAssimilatorStock.jpg"
+      />
+    </div>
+    <div
+      class="ml-4 flex flex-1 flex-col"
+    >
+      <div>
+        <div
+          class="flex justify-between text-base font-medium text-gray-900"
+        >
+          <h3>
+            Norn Emissary
+          </h3>
+          <p
+            class="ml-4"
+          >
+            £70.00
+          </p>
+        </div>
+        <p
+          class="mt-1 text-sm text-gray-500"
+        >
+          Tyranids
+        </p>
+      </div>
+      <div
+        class="flex flex-1 items-end justify-between text-sm"
+      >
+        <article>
+          <label
+            class="sr-only"
+            for="cart-00001"
+          >
+            Quantity
+          </label>
+          <select
+            class="_select_31f26a"
+            id="cart-00001"
+            name="cart-00001"
+          >
+            <option
+              value="1"
+            >
+              1
+            </option>
+            <option
+              value="2"
+            >
+              2
+            </option>
+            <option
+              value="3"
+            >
+              3
+            </option>
+            <option
+              value="4"
+            >
+              4
+            </option>
+            <option
+              value="5"
+            >
+              5
+            </option>
+            <option
+              value="6"
+            >
+              6
+            </option>
+            <option
+              value="7"
+            >
+              7
+            </option>
+            <option
+              value="8"
+            >
+              8
+            </option>
+          </select>
+        </article>
+        <div
+          class="flex"
+        >
+          <button
+            class="font-medium text-indigo-600 hover:text-indigo-500"
+            type="button"
+          >
+            Remove
+          </button>
+        </div>
+      </div>
+    </div>
+  </li>
+</div>
+`;
