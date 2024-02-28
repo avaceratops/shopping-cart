@@ -9,7 +9,7 @@ export default function Dialog({ title, children }) {
     <>
       <button
         className={`rounded bg-gray-500 px-8 py-2 text-sm font-bold text-white hover:bg-gray-400
-          focus:outline-none focus:ring focus:ring-gray-400/50`}
+          focus-visible:outline-none focus-visible:ring focus-visible:ring-gray-400/50`}
         onClick={() => setOpen(true)}
       >
         {title}
