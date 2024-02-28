@@ -20,7 +20,13 @@ export default function ProductCard({ product }) {
         className="flex h-full w-full flex-col justify-end rounded border p-3 shadow-sm
           hover:border-gray-400 hover:shadow-lg"
       >
-        <img className="mb-auto" src={image || '/images/200.svg'} alt=""></img>
+        <img
+          className="mb-auto"
+          src={image || '/images/200.svg'}
+          alt=""
+          height={1900}
+          width={1840}
+        />
         <p className="mt-4 text-xl font-bold text-indigo-500">{formatPrice(price)}</p>
         <h2 className="font-semibold">{name || 'Placeholder'}</h2>
         <h3 className="mb-4 text-sm text-gray-500">{faction || 'Unknown'}</h3>
