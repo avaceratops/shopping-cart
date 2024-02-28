@@ -45,7 +45,7 @@ export default function Product() {
       </button>
       <section className="flex flex-col gap-8 sm:flex-row">
         <article className="flex basis-1/2 items-center self-start rounded border shadow-sm">
-          <img src={image} alt=""></img>
+          <img src={image} alt="" width={1840} height={1900} />
         </article>
 
         <section className="flex-grow basis-1/2">

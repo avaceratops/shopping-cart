@@ -7,7 +7,14 @@ export default function Home() {
         <h2 className="mb-6 text-2xl font-bold leading-none tracking-tight">Coming Soon</h2>
         <section className="flex flex-col gap-5 md:gap-10" data-testid="promotional-images">
           {PROMOTIONAL_IMAGES.map((image, index) => (
-            <img key={index} src={image} alt="" className="rounded-lg lg:rounded-2xl" />
+            <img
+              key={index}
+              src={image}
+              alt=""
+              className="rounded-lg lg:rounded-2xl"
+              width={1640}
+              height={760}
+            />
           ))}
         </section>
 
@@ -19,7 +26,7 @@ export default function Home() {
           data-testid="game-logos"
         >
           {GAME_LOGOS.map((image, index) => (
-            <img key={index} src={image} alt="" />
+            <img key={index} src={image} alt="" width={2953} height={813} />
           ))}
         </section>
       </div>
