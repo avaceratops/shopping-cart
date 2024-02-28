@@ -145,9 +145,9 @@ export default function Products() {
       </section>
 
       {filteredProducts.length === 0 && (
-        <p className="my-14 justify-self-center text-2xl font-bold leading-none tracking-tight">
-          No products found.
-        </p>
+        <section className="mt-10 grid h-32 place-content-center">
+          <p className="text-2xl font-bold leading-none tracking-tight">No products found.</p>
+        </section>
       )}
 
       <section
