@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate, useOutletContext, useParams } from 'react-router-dom';
 import { formatPrice } from '../utils/formatting';
 import AddProductButton from '../components/AddProductButton';
+import Collapsible from '../components/Collapsible';
 import ErrorMessage from '../components/ErrorMessage';
 import LoadingSpinner from '../components/LoadingSpinner';
 import StockIndicator from '../components/StockIndicator';
@@ -23,7 +24,7 @@ export default function Product() {
     return <ErrorMessage />;
   }
 
-  const { id, name, price, faction, image, sku, stock } = product;
+  const { id, name, price, faction, image, sku, stock, desc } = product;
 
   const handleAddClick = () => {
     addToCart(product, quantity);
@@ -42,12 +43,12 @@ export default function Product() {
       >
         Back
       </button>
-      <section className="flex flex-col gap-6 sm:flex-row">
-        <article className="flex basis-7/12 items-center rounded border shadow-sm">
+      <section className="flex flex-col gap-8 sm:flex-row">
+        <article className="flex basis-1/2 items-center self-start rounded border shadow-sm">
           <img src={image} alt=""></img>
         </article>
 
-        <section className="flex-grow">
+        <section className="flex-grow basis-1/2">
           <h2 className="text-2xl font-semibold">{name}</h2>
           <h3 className="text-xl text-gray-500">{faction}</h3>
 
@@ -71,8 +72,12 @@ export default function Product() {
             />
           </div>
 
-          <div className="xs:max-w-72">
+          <div className="mb-12 xs:max-w-72">
             <AddProductButton stock={stock} onClick={handleAddClick} />
+          </div>
+
+          <div className="border-t xs:max-w-prose">
+            <Collapsible buttonText={'Description'} panelText={desc} />
           </div>
         </section>
       </section>
