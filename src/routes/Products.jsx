@@ -78,7 +78,7 @@ export default function Products() {
   const divider = <div className="my-4 border-b" />;
 
   return (
-    <section className="flex flex-col items-center gap-4">
+    <section className="flex flex-col gap-4">
       <section className="mb-6 hidden whitespace-pre-line rounded-lg bg-gray-100 p-6 md:block">
         <p>{GAME_DESCRIPTIONS[game]}</p>
       </section>
