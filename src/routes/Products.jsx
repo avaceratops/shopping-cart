@@ -8,6 +8,7 @@ import {
   sortByAvailability,
 } from '../utils/products';
 import Checkbox from '../components/Checkbox';
+import Collapsible from '../components/Collapsible';
 import Dialog from '../components/Dialog';
 import ErrorMessage from '../components/ErrorMessage';
 import LoadingSpinner from '../components/LoadingSpinner';
@@ -86,31 +87,33 @@ export default function Products() {
         <Dialog title="Filters">
           {divider}
           <section>
-            <h3 className="font-bold">Faction</h3>
-            {FACTION_NAMES[game].map((faction) => (
-              <Checkbox
-                key={faction}
-                id={faction}
-                label={faction}
-                checked={filters.factions.includes(faction)}
-                onChange={handleFactionCheckbox}
-              />
-            ))}
+            <Collapsible defaultOpen={true} buttonText={'Faction'}>
+              {FACTION_NAMES[game].map((faction) => (
+                <Checkbox
+                  key={faction}
+                  id={faction}
+                  label={faction}
+                  checked={filters.factions.includes(faction)}
+                  onChange={handleFactionCheckbox}
+                />
+              ))}
+            </Collapsible>
             {divider}
 
-            <h3 className="font-bold">Availability</h3>
-            <Checkbox
-              id="inStock"
-              label="In stock"
-              checked={filters.inStock}
-              onChange={handleToggleCheckbox}
-            />
-            <Checkbox
-              id="outOfStock"
-              label="Out of stock"
-              checked={filters.outOfStock}
-              onChange={handleToggleCheckbox}
-            />
+            <Collapsible defaultOpen={true} buttonText={'Availability'}>
+              <Checkbox
+                id="inStock"
+                label="In stock"
+                checked={filters.inStock}
+                onChange={handleToggleCheckbox}
+              />
+              <Checkbox
+                id="outOfStock"
+                label="Out of stock"
+                checked={filters.outOfStock}
+                onChange={handleToggleCheckbox}
+              />
+            </Collapsible>
             {divider}
 
             <button
