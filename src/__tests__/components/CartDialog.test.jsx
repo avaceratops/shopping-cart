@@ -65,6 +65,17 @@ it('displays correct cart quantity when cart is not empty', () => {
   expect(cartButton).toBeInTheDocument();
 });
 
+it('displays message when cart is empty', async () => {
+  const user = userEvent.setup();
+  render(<CartDialog cart={[]} />);
+
+  const button = screen.getByRole('button', { name: /cart/i });
+  await user.click(button);
+  const emptyMessage = screen.getByText(/your cart is empty\./i);
+
+  expect(emptyMessage).toBeInTheDocument();
+});
+
 it('displays correct cart subtotal when cart is empty', async () => {
   const user = userEvent.setup();
   render(<CartDialog cart={[]} />);

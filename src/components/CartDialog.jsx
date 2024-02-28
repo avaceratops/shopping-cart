@@ -52,6 +52,12 @@ export default function CartDialog({ cart, updateCartItem, removeFromCart }) {
                       </div>
                     </div>
 
+                    {totalQuantity === 0 && (
+                      <div className="grid h-full place-content-center text-sm text-gray-500">
+                        <p>Your cart is empty.</p>
+                      </div>
+                    )}
+
                     <div className="mt-8 flow-root">
                       <ul role="list" className="-my-6 divide-y divide-gray-200">
                         {cart.map((item) => (
