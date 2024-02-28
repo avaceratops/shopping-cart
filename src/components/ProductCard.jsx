@@ -17,8 +17,8 @@ export default function ProductCard({ product }) {
   return (
     <Link to={`/${game}/${id}`}>
       <article
-        className="flex h-full flex-col rounded border p-3 shadow-sm hover:border-gray-400
-          hover:shadow-lg"
+        className="flex h-full w-full flex-col justify-end rounded border p-3 shadow-sm
+          hover:border-gray-400 hover:shadow-lg"
       >
         <img className="mb-auto" src={image || '/images/200.svg'} alt=""></img>
         <p className="mt-4 text-xl font-bold text-indigo-500">{formatPrice(price)}</p>
