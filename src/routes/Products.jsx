@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useOutletContext, useParams } from 'react-router-dom';
 import {
   FACTION_NAMES,
+  GAME_DESCRIPTIONS,
   SORT_METHODS,
   getSortFunction,
   sortByAvailability,
@@ -77,6 +78,10 @@ export default function Products() {
 
   return (
     <section className="flex flex-col items-center gap-4">
+      <section className="mb-6 hidden whitespace-pre-line rounded-lg bg-gray-100 p-6 md:block">
+        <p>{GAME_DESCRIPTIONS[game]}</p>
+      </section>
+
       <section className="flex w-full flex-col justify-between gap-4 xs:flex-row">
         <Dialog title="Filters">
           {divider}
