@@ -46,21 +46,18 @@ exports[`renders header correctly 1`] = `
           <h1
             class="text-2xl font-bold leading-none tracking-tight text-black"
           >
-            shopping cart
+            <a
+              aria-current="page"
+              class="active"
+              href="/"
+            >
+              shopping cart
+            </a>
           </h1>
         </section>
         <ul
           class="hidden h-full space-x-8 text-sm font-medium md:flex"
         >
-          <li>
-            <a
-              aria-current="page"
-              class="_navLink_800479 active"
-              href="/"
-            >
-              Home
-            </a>
-          </li>
           <li>
             <a
               class="_navLink_800479"

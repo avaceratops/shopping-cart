@@ -35,7 +35,7 @@ it('renders all navigation links correctly', () => {
     </BrowserRouter>
   );
 
-  NAVIGATION_LINKS.forEach((item) => {
+  NAVIGATION_LINKS.filter((item) => item.name !== 'Home').forEach((item) => {
     expect(screen.getByRole('link', { name: item.name })).toBeInTheDocument();
   });
 });

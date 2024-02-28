@@ -15,12 +15,12 @@ export default function Header({ cart, updateCartItem, removeFromCart, clearCart
 
           <section className="hidden xs:block lg:flex-1">
             <h1 className="text-2xl font-bold leading-none tracking-tight text-black">
-              shopping cart
+              <NavLink to="/">shopping cart</NavLink>
             </h1>
           </section>
 
           <ul className="hidden h-full space-x-8 text-sm font-medium md:flex">
-            {NAVIGATION_LINKS.map((item) => (
+            {NAVIGATION_LINKS.filter((item) => item.name !== 'Home').map((item) => (
               <li key={item.name}>
                 <NavLink to={item.to} className={styles.navLink}>
                   {item.name}
