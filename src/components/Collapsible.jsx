@@ -1,9 +1,9 @@
 import { Disclosure } from '@headlessui/react';
 import { MinusIcon, PlusIcon } from '@heroicons/react/20/solid';
 
-export default function Collapsible({ buttonText, children }) {
+export default function Collapsible({ defaultOpen = false, buttonText, children }) {
   return (
-    <Disclosure>
+    <Disclosure defaultOpen={defaultOpen}>
       {({ open }) => (
         <>
           <Disclosure.Button
