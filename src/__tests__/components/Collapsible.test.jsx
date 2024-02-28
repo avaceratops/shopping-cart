@@ -1,4 +1,4 @@
-import { render, screen, within } from '@testing-library/react';
+import { render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Collapsible from '../../components/Collapsible';
 
@@ -21,8 +21,10 @@ it('displays panel text when button is clicked', async () => {
   const button = screen.getByRole('button');
   await user.click(button);
 
-  expect(within(button).getByText('Close panel')).toBeInTheDocument();
-  expect(screen.getByText(panelText)).toBeInTheDocument();
+  waitFor(() => {
+    expect(within(button).getByText('Close panel')).toBeInTheDocument();
+    expect(screen.getByText(panelText)).toBeInTheDocument();
+  });
 });
 
 it('hides panel text when button is clicked again', async () => {
