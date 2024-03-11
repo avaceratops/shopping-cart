@@ -1,12 +1,13 @@
-import { Link, useOutletContext, useParams } from 'react-router-dom';
+import { Link, useOutletContext } from 'react-router-dom';
 import { formatPrice } from '../utils/formatting';
+import { getGameByProductId } from '../utils/products';
 import StockIndicator from './StockIndicator';
 import AddProductButton from './AddProductButton';
 
 export default function ProductCard({ product }) {
-  const { game } = useParams();
   const { addToCart } = useOutletContext();
   const { id, name, price, faction, image, stock } = product;
+  const game = getGameByProductId(id);
 
   const handleClick = (e) => {
     e.preventDefault();

@@ -32,6 +32,11 @@ export const GAME_DESCRIPTIONS = {
     'Plunge into an epic journey through Age of Sigmar at Shopping Cart. Discover the vast lore and captivating world of this legendary tabletop game, as you command your armies across the Mortal Realms. From the stalwart Stormcast Eternals to the cunning Orruks and beyond, muster your legions and ready yourself for grand skirmishes.\n\nTake advantage of competitive prices to expand your collection and conquer the Mortal Realms without breaking the bank. If you need assistance selecting the perfect miniatures, our knowledgeable staff are here to help. And with free delivery on all orders over £50, building the perfect army has never been easier.',
 };
 
+export function getGameByProductId(id) {
+  const start = id.charAt(0);
+  return start === '0' ? 'warhammer-40k' : start === '1' ? 'age-of-sigmar' : null;
+}
+
 export function sortByAvailability(a, b) {
   if (a.stock === 0 && b.stock > 0) {
     return 1;

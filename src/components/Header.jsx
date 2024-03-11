@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom';
 import { NAVIGATION_LINKS } from '../utils/navigation';
 import CartDialog from './CartDialog';
 import Hamburger from './Hamburger';
+import SearchDialog from './SearchDialog';
 import styles from '../styles/NavLink.module.scss';
 
 export default function Header({ cart, updateCartItem, removeFromCart, clearCart }) {
@@ -13,7 +14,7 @@ export default function Header({ cart, updateCartItem, removeFromCart, clearCart
             <Hamburger />
           </section>
 
-          <section className="hidden xs:block lg:flex-1">
+          <section className="hidden sm:block lg:flex-1">
             <h1 className="text-2xl font-bold leading-none tracking-tight text-black">
               <NavLink to="/">shopping cart</NavLink>
             </h1>
@@ -29,7 +30,9 @@ export default function Header({ cart, updateCartItem, removeFromCart, clearCart
             ))}
           </ul>
 
-          <section className="flex flex-1 justify-end md:flex-initial lg:flex-1">
+          <section className="flex flex-1 justify-end gap-1 md:flex-initial lg:flex-1">
+            <SearchDialog />
+
             <CartDialog
               cart={cart}
               updateCartItem={updateCartItem}

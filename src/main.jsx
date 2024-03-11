@@ -5,6 +5,7 @@ import Root from './routes/Root';
 import Home from './routes/Home';
 import Products from './routes/Products';
 import Product from './routes/Product';
+import Search from './routes/Search';
 import ErrorMessage from './components/ErrorMessage';
 import './index.scss';
 
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: ':game/:productId',
         element: <Product />,
+      },
+      {
+        path: 'search',
+        element: <Search />,
       },
       {
         path: '/*',
