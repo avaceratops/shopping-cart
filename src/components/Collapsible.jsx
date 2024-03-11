@@ -1,14 +1,16 @@
 import { Disclosure, Transition } from '@headlessui/react';
 import { MinusIcon, PlusIcon } from '@heroicons/react/20/solid';
 
-export default function Collapsible({ defaultOpen = false, buttonText, children }) {
+export default function Collapsible({ className, defaultOpen = false, buttonText, children }) {
   return (
     <Disclosure defaultOpen={defaultOpen}>
       {({ open }) => (
         <>
           <Disclosure.Button
-            className={`flex w-full items-center justify-between rounded focus-visible:outline-none
-            focus-visible:ring focus-visible:ring-indigo-500/50 ${open ? 'text-indigo-600' : ''}`}
+            className={`${className} flex w-full items-center justify-between rounded border-t
+            focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-500/50 ${
+              open ? 'text-indigo-600' : ''
+            }`}
           >
             <span className="font-semibold">{buttonText}</span>
             <span className="sr-only">{`${open ? 'Close' : 'Open'} panel`}</span>

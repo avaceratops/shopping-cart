@@ -76,9 +76,9 @@ export default function Product() {
             <AddProductButton stock={stock} onClick={handleAddClick} />
           </div>
 
-          <div className="border-t py-6 xs:max-w-prose">
-            <Collapsible buttonText={'Description'}>
-              <p className="whitespace-pre-line pt-6 text-gray-700">{desc}</p>
+          <div className="mb-6 xs:max-w-prose">
+            <Collapsible className={'py-6'} buttonText={'Description'}>
+              <p className="whitespace-pre-line text-gray-700">{desc}</p>
             </Collapsible>
           </div>
         </section>

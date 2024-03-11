@@ -74,7 +74,6 @@ export default function Products() {
   const sortFunction = getSortFunction(sortMethod);
   // always move out-of-stock products to the end
   const sortedProducts = filteredProducts.sort(sortFunction).sort(sortByAvailability);
-  const divider = <div className="my-4 border-b" />;
 
   return (
     <section className="flex flex-col gap-4">
@@ -84,36 +83,39 @@ export default function Products() {
 
       <section className="flex w-full flex-col justify-between gap-4 xs:flex-row">
         <Dialog title="Filters">
-          {divider}
           <section>
-            <Collapsible defaultOpen={true} buttonText={'Faction'}>
-              {FACTION_NAMES[game].map((faction) => (
-                <Checkbox
-                  key={faction}
-                  id={faction}
-                  label={faction}
-                  checked={filters.factions.includes(faction)}
-                  onChange={handleFactionCheckbox}
-                />
-              ))}
+            <Collapsible className={'py-3'} defaultOpen={true} buttonText={'Faction'}>
+              <div className="mb-4 flex flex-col gap-1">
+                {FACTION_NAMES[game].map((faction) => (
+                  <Checkbox
+                    key={faction}
+                    id={faction}
+                    label={faction}
+                    checked={filters.factions.includes(faction)}
+                    onChange={handleFactionCheckbox}
+                  />
+                ))}
+              </div>
             </Collapsible>
-            {divider}
 
-            <Collapsible defaultOpen={true} buttonText={'Availability'}>
-              <Checkbox
-                id="inStock"
-                label="In stock"
-                checked={filters.inStock}
-                onChange={handleToggleCheckbox}
-              />
-              <Checkbox
-                id="outOfStock"
-                label="Out of stock"
-                checked={filters.outOfStock}
-                onChange={handleToggleCheckbox}
-              />
+            <Collapsible className={'py-3'} defaultOpen={true} buttonText={'Availability'}>
+              <div className="mb-4 flex flex-col gap-1">
+                <Checkbox
+                  id="inStock"
+                  label="In stock"
+                  checked={filters.inStock}
+                  onChange={handleToggleCheckbox}
+                />
+                <Checkbox
+                  id="outOfStock"
+                  label="Out of stock"
+                  checked={filters.outOfStock}
+                  onChange={handleToggleCheckbox}
+                />
+              </div>
             </Collapsible>
-            {divider}
+
+            <div className="mb-5 border-b" />
 
             <button
               className="rounded bg-gray-500 px-8 py-2 text-sm font-bold text-white

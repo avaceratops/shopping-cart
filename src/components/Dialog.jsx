@@ -42,7 +42,7 @@ export default function Dialog({ title, children }) {
               <HeadlessDialog.Panel className="pointer-events-auto w-screen max-w-sm">
                 <div className="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
                   <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
-                    <div className="mb-8 flex items-center justify-between">
+                    <div className="mb-6 flex items-center justify-between">
                       <HeadlessDialog.Title className="text-2xl font-bold text-black">
                         {title}
                       </HeadlessDialog.Title>
