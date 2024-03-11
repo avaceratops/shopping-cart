@@ -3,7 +3,6 @@ import { useOutletContext, useParams } from 'react-router-dom';
 import {
   FACTION_NAMES,
   GAME_DESCRIPTIONS,
-  SORT_METHODS,
   getSortFunction,
   sortByAvailability,
 } from '../utils/products';
@@ -13,7 +12,7 @@ import Dialog from '../components/Dialog';
 import ErrorMessage from '../components/ErrorMessage';
 import LoadingSpinner from '../components/LoadingSpinner';
 import ProductCard from '../components/ProductCard';
-import styles from '../styles/Select.module.scss';
+import SortBy from '../components/SortBy';
 
 export default function Products() {
   const { game } = useParams();
@@ -126,22 +125,7 @@ export default function Products() {
           </section>
         </Dialog>
 
-        <label htmlFor="sort-method" className="self-center font-medium xs:self-auto">
-          Sort By
-          <select
-            id="sort-method"
-            name="sort-method"
-            className={`${styles.select} ml-3`}
-            onChange={handleChangeSort}
-            defaultValue={sortMethod}
-          >
-            {Object.keys(SORT_METHODS).map((method) => (
-              <option key={method} value={method}>
-                {method}
-              </option>
-            ))}
-          </select>
-        </label>
+        <SortBy defaultValue={sortMethod} onChange={handleChangeSort} />
       </section>
 
       {filteredProducts.length === 0 && (
