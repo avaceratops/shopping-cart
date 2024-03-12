@@ -25,8 +25,8 @@ export default function ProductCard({ product }) {
           className="mb-auto"
           src={`${image}--400.webp` || '/images/200.svg'}
           alt=""
-          height={380}
-          width={368}
+          width={400}
+          height={413}
         />
         <p className="mt-4 text-xl font-bold text-indigo-500">{formatPrice(price)}</p>
         <h2 className="font-semibold">{name || 'Placeholder'}</h2>

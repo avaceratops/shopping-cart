@@ -44,7 +44,7 @@ export default function Product() {
         Back
       </button>
       <section className="flex flex-col gap-8 sm:flex-row">
-        <article className="flex basis-1/2 items-center self-start rounded border shadow-sm">
+        <article className="basis-1/2 self-start rounded border shadow-sm">
           <img
             srcSet={`${image}--400.webp 400w, ${image}--800.webp 800w`}
             sizes="
@@ -53,7 +53,7 @@ export default function Product() {
                 calc(100vw - 42px)"
             src={`${image}--800.webp`}
             alt=""
-            className="w-full p-2"
+            className="p-2"
             width={800}
             height={826}
           />

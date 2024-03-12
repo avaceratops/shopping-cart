@@ -43,8 +43,8 @@ export default function Home() {
                 calc(100vw - 40px)"
               src={`${image}--800.webp`}
               alt=""
-              width={500}
-              height={138}
+              width={800}
+              height={220}
             />
           ))}
         </section>
