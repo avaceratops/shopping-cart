@@ -6,13 +6,17 @@ exports[`renders cart item correctly 1`] = `
     class="flex py-6"
   >
     <div
-      class="h-24 w-24 flex-shrink-0 overflow-hidden rounded border"
+      class="flex h-24 w-24 flex-shrink-0 justify-center overflow-hidden rounded border"
     >
-      <img
-        alt=""
-        class="h-full w-full object-cover object-center"
-        src="/images/warhammer-40k/https___trade.games-workshop.com_assets_2023_08_99120106064_NornAssimilatorStock.jpg"
-      />
+      <a
+        href="/warhammer-40k/00001"
+      >
+        <img
+          alt=""
+          class="h-full p-1"
+          src="/images/warhammer-40k/https___trade.games-workshop.com_assets_2023_08_99120106064_NornAssimilatorStock.jpg--100.webp"
+        />
+      </a>
     </div>
     <div
       class="ml-4 flex flex-1 flex-col"
@@ -21,9 +25,13 @@ exports[`renders cart item correctly 1`] = `
         <div
           class="flex justify-between text-base font-medium text-gray-900"
         >
-          <h3>
-            Norn Emissary
-          </h3>
+          <a
+            href="/warhammer-40k/00001"
+          >
+            <h3>
+              Norn Emissary
+            </h3>
+          </a>
           <p
             class="ml-4"
           >

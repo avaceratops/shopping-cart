@@ -38,7 +38,7 @@ it('renders product card correctly', () => {
   );
 
   expect(screen.getByRole('link')).toHaveAttribute('href', `/${game}/${product.id}`);
-  expect(screen.getByRole('img')).toHaveAttribute('src', product.image);
+  expect(screen.getByRole('img')).toHaveAttribute('src', product.image + '--400.webp');
   expect(screen.getByText(`£${(product.price / 100).toFixed(2)}`)).toBeInTheDocument();
   expect(screen.getByRole('heading', { name: product.name })).toBeInTheDocument();
   expect(screen.getByRole('heading', { name: product.faction })).toBeInTheDocument();

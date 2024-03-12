@@ -10,7 +10,7 @@ it('renders promotional images correctly', () => {
 
   expect(images).toHaveLength(PROMOTIONAL_IMAGES.length);
   images.forEach((image, index) => {
-    expect(image).toHaveAttribute('src', PROMOTIONAL_IMAGES[index]);
+    expect(image).toHaveAttribute('src', PROMOTIONAL_IMAGES[index] + '--1024.webp');
   });
 });
 
@@ -22,6 +22,6 @@ it('renders game logos correctly', () => {
 
   expect(images).toHaveLength(GAME_LOGOS.length);
   images.forEach((image, index) => {
-    expect(image).toHaveAttribute('src', GAME_LOGOS[index]);
+    expect(image).toHaveAttribute('src', GAME_LOGOS[index] + '--800.webp');
   });
 });

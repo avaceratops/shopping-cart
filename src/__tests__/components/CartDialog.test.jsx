@@ -1,4 +1,5 @@
 import { vi } from 'vitest';
+import { BrowserRouter } from 'react-router-dom';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import CartDialog from '../../components/CartDialog';
@@ -94,7 +95,11 @@ it('displays correct cart subtotal when cart is not empty', async () => {
     { product: { id: '2', price: 4250 }, quantity: 3 },
     { product: { id: '3', price: 5000 }, quantity: 1 },
   ];
-  render(<CartDialog cart={cart} />);
+  render(
+    <BrowserRouter>
+      <CartDialog cart={cart} />
+    </BrowserRouter>
+  );
 
   const button = screen.getByRole('button', { name: /cart/i });
   await user.click(button);
@@ -106,12 +111,14 @@ it('displays correct cart subtotal when cart is not empty', async () => {
 it('renders cart items correctly', async () => {
   const user = userEvent.setup();
   render(
-    <CartDialog
-      cart={[
-        { product: { id: '1', name: 'Norn Emissary' }, quantity: 1 },
-        { product: { id: '2', name: 'Angron' }, quantity: 1 },
-      ]}
-    />
+    <BrowserRouter>
+      <CartDialog
+        cart={[
+          { product: { id: '1', name: 'Norn Emissary' }, quantity: 1 },
+          { product: { id: '2', name: 'Angron' }, quantity: 1 },
+        ]}
+      />
+    </BrowserRouter>
   );
 
   const button = screen.getByRole('button', { name: /cart/i });

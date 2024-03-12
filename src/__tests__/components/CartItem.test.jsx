@@ -1,4 +1,5 @@
 import { vi } from 'vitest';
+import { BrowserRouter } from 'react-router-dom';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import CartItem from '../../components/CartItem';
@@ -16,14 +17,22 @@ const product = {
 };
 
 it('renders cart item correctly', () => {
-  const { container } = render(<CartItem product={product} />);
+  const { container } = render(
+    <BrowserRouter>
+      <CartItem product={product} />
+    </BrowserRouter>
+  );
   expect(container).toMatchSnapshot();
 });
 
 it('calls removeFromCart correctly when "Remove" button is clicked', async () => {
   const removeFromCart = vi.fn();
   const user = userEvent.setup();
-  render(<CartItem product={product} removeFromCart={removeFromCart} />);
+  render(
+    <BrowserRouter>
+      <CartItem product={product} removeFromCart={removeFromCart} />
+    </BrowserRouter>
+  );
 
   const removeButton = screen.getByRole('button', { name: /remove/i });
   await user.click(removeButton);
