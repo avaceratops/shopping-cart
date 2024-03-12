@@ -3,7 +3,13 @@ import { formatPrice } from '../utils/formatting';
 import { getGameByProductId } from '../utils/products';
 import QuantitySelector from './QuantitySelector';
 
-export default function CartItem({ product, quantity, updateCartItem, removeFromCart }) {
+export default function CartItem({
+  product,
+  quantity,
+  updateCartItem,
+  removeFromCart,
+  toggleCart,
+}) {
   const game = getGameByProductId(product.id);
 
   const handleRemoveClick = () => {
@@ -17,7 +23,7 @@ export default function CartItem({ product, quantity, updateCartItem, removeFrom
   return (
     <li key={product.id} className="flex py-6">
       <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded border">
-        <Link to={`/${game}/${product.id}`}>
+        <Link to={`/${game}/${product.id}`} onClick={toggleCart}>
           <img className="p-1" src={`${product.image}--100.webp`} alt="" width={100} height={103} />
         </Link>
       </div>
@@ -25,7 +31,7 @@ export default function CartItem({ product, quantity, updateCartItem, removeFrom
       <div className="ml-4 flex flex-1 flex-col">
         <div>
           <div className="flex justify-between text-base font-medium text-gray-900">
-            <Link to={`/${game}/${product.id}`}>
+            <Link to={`/${game}/${product.id}`} onClick={toggleCart}>
               <h3>{product.name}</h3>
             </Link>
             <p className="ml-4">{formatPrice(product.price)}</p>

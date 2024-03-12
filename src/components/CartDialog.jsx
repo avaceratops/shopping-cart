@@ -11,6 +11,10 @@ export default function CartDialog({ cart, updateCartItem, removeFromCart }) {
   const totalQuantity = cart.reduce((acc, item) => acc + item.quantity, 0);
   const totalPrice = cart.reduce((acc, item) => acc + item.product.price * item.quantity, 0);
 
+  function toggleCart() {
+    setOpen(!open);
+  }
+
   return (
     <>
       <CartButton totalQuantity={totalQuantity} onClick={() => setOpen(true)} />
@@ -67,6 +71,7 @@ export default function CartDialog({ cart, updateCartItem, removeFromCart }) {
                             quantity={item.quantity}
                             updateCartItem={updateCartItem}
                             removeFromCart={removeFromCart}
+                            toggleCart={toggleCart}
                           />
                         ))}
                       </ul>
