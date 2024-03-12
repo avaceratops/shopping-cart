@@ -137,7 +137,7 @@ export default function Products() {
       )}
 
       <section
-        className="col-start-2 grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4
+        className="col-start-2 grid gap-5 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4
           xl:grid-cols-5"
       >
         {sortedProducts.map((product) => (
