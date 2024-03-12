@@ -1,13 +1,13 @@
-import { useState } from 'react';
 import { Outlet, ScrollRestoration } from 'react-router-dom';
 import { MAX_PURCHASE_QUANTITY } from '../utils/products';
+import useLocalStorage from '../hooks/useLocalStorage';
 import useProductData from '../hooks/useProductData';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 export default function Root() {
   const { data, isLoading, isError } = useProductData();
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useLocalStorage('cart', []);
 
   function addToCart(product, quantity = 1) {
     const index = cart.findIndex((item) => item.product.id === product.id);
