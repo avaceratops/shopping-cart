@@ -9,11 +9,17 @@ export default function Home() {
           {PROMOTIONAL_IMAGES.map((image, index) => (
             <img
               key={index}
-              src={image}
+              srcSet={`${image}--600.webp 600w, ${image}--1024.webp 1024w`}
+              sizes="
+                (min-width: 1320px) 1024px,
+                (min-width: 780px) calc(91.54vw - 166px),
+                (min-width: 640px) calc(100vw - 136px),
+                calc(100vw - 40px)"
+              src={`${image}--1024.webp`}
               alt=""
               className="rounded-lg lg:rounded-2xl"
-              width={1640}
-              height={760}
+              width={1024}
+              height={475}
             />
           ))}
         </section>
@@ -26,7 +32,20 @@ export default function Home() {
           data-testid="game-logos"
         >
           {GAME_LOGOS.map((image, index) => (
-            <img key={index} src={image} alt="" width={2953} height={813} />
+            <img
+              key={index}
+              srcSet={`${image}--400.webp 400w, ${image}--800.webp 800w`}
+              sizes="
+                (min-width: 1320px) 496px,
+                (min-width: 780px) calc(45.77vw - 99px),
+                (min-width: 640px) calc(50vw - 84px),
+                (min-width: 420px) calc(50vw - 36px),
+                calc(100vw - 40px)"
+              src={`${image}--800.webp`}
+              alt=""
+              width={500}
+              height={138}
+            />
           ))}
         </section>
       </div>

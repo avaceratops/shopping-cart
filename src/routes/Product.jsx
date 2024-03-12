@@ -45,7 +45,18 @@ export default function Product() {
       </button>
       <section className="flex flex-col gap-8 sm:flex-row">
         <article className="flex basis-1/2 items-center self-start rounded border shadow-sm">
-          <img src={image} alt="" width={1840} height={1900} />
+          <img
+            srcSet={`${image}--400.webp 400w, ${image}--800.webp 800w`}
+            sizes="
+                (min-width: 1540px) 730px,
+                (min-width: 640px) 40vw,
+                calc(100vw - 42px)"
+            src={`${image}--800.webp`}
+            alt=""
+            className="w-full p-2"
+            width={800}
+            height={826}
+          />
         </article>
 
         <section className="flex-grow basis-1/2">

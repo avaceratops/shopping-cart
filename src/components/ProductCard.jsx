@@ -23,10 +23,10 @@ export default function ProductCard({ product }) {
       >
         <img
           className="mb-auto"
-          src={image || '/images/200.svg'}
+          src={`${image}--400.webp` || '/images/200.svg'}
           alt=""
-          height={1900}
-          width={1840}
+          height={380}
+          width={368}
         />
         <p className="mt-4 text-xl font-bold text-indigo-500">{formatPrice(price)}</p>
         <h2 className="font-semibold">{name || 'Placeholder'}</h2>

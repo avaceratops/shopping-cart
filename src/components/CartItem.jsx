@@ -16,9 +16,9 @@ export default function CartItem({ product, quantity, updateCartItem, removeFrom
 
   return (
     <li key={product.id} className="flex py-6">
-      <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded border">
+      <div className="flex h-24 w-24 flex-shrink-0 justify-center overflow-hidden rounded border">
         <Link to={`/${game}/${product.id}`}>
-          <img className="h-full w-full object-cover object-center" src={product.image} alt="" />
+          <img className="h-full p-1" src={`${product.image}--100.webp`} alt="" />
         </Link>
       </div>
 
