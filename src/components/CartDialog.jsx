@@ -88,8 +88,8 @@ export default function CartDialog({ cart, updateCartItem, removeFromCart }) {
                       <a
                         href="#"
                         className="flex justify-center rounded bg-indigo-600 px-6 py-3 font-bold
-                          text-white shadow hover:bg-indigo-500 focus:outline-none focus:ring
-                          focus:ring-indigo-500/50"
+                          text-white shadow hover:bg-indigo-700 focus:outline-none focus:ring
+                          focus:ring-indigo-500/50 active:bg-indigo-800"
                       >
                         Checkout
                       </a>

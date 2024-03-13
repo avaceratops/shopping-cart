@@ -41,8 +41,8 @@ export default function Search() {
     <section className="flex flex-col items-center gap-4">
       <section className="flex w-full flex-col justify-between gap-4 xs:flex-row">
         <button
-          className="rounded bg-gray-500 px-8 py-2 text-sm font-bold text-white hover:bg-gray-400
-            focus:outline-none focus:ring focus:ring-gray-400/50"
+          className="rounded bg-slate-500 px-8 py-2 text-sm font-bold text-white hover:bg-slate-600
+            focus:outline-none focus:ring focus:ring-slate-400/50 active:bg-slate-700"
           onClick={() => navigate(-1)}
         >
           Back

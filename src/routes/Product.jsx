@@ -37,8 +37,9 @@ export default function Product() {
   return (
     <>
       <button
-        className="mb-4 rounded bg-gray-500 px-8 py-2 text-sm font-bold text-white hover:bg-gray-400
-          focus:outline-none focus:ring focus:ring-gray-400/50"
+        className="mb-4 rounded bg-slate-500 px-8 py-2 text-sm font-bold text-white
+          hover:bg-slate-600 focus:outline-none focus:ring focus:ring-slate-400/50
+          active:bg-slate-700"
         onClick={() => navigate(-1)}
       >
         Back

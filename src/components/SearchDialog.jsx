@@ -22,12 +22,15 @@ export default function SearchDialog() {
   return (
     <>
       <button
-        className="group flex items-center rounded-md p-2 hover:bg-gray-400 hover:text-white"
+        className="group flex items-center rounded-md p-2 hover:bg-slate-600 hover:text-white
+          focus:bg-slate-600 focus:text-white focus:outline-none focus:ring focus:ring-slate-400/50
+          active:bg-slate-700"
         onClick={() => setOpen(true)}
       >
         <span className="sr-only">Search</span>
         <MagnifyingGlassIcon
-          className="block h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-white"
+          className="block h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-white
+            group-focus:text-white"
           aria-hidden="true"
         />
       </button>
@@ -43,10 +46,7 @@ export default function SearchDialog() {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div
-              className="fixed inset-0 bg-gray-900/25 opacity-100 backdrop-blur
-                transition-opacity"
-            />
+            <div className="fixed inset-0 bg-gray-900/25 opacity-100 backdrop-blur transition-opacity" />
           </Transition.Child>
 
           <Transition.Child
@@ -59,11 +59,11 @@ export default function SearchDialog() {
             leaveTo="opacity-0 scale-95"
           >
             <div className="relative w-full max-w-lg px-4">
-              <Dialog.Panel className="overflow-hidden rounded-lg bg-white shadow-md">
+              <Dialog.Panel className="shadow-lg outline-2">
                 <div className="relative">
                   <input
                     type="text"
-                    className="w-full appearance-none py-4 pl-4 pr-12 text-slate-900
+                    className="w-full appearance-none rounded-lg py-4 pl-4 pr-12 text-slate-900
                       placeholder:text-slate-600 focus:outline-none"
                     placeholder="Search..."
                     defaultValue={query}
@@ -71,8 +71,9 @@ export default function SearchDialog() {
                     onKeyDown={handleSearch}
                   />
                   <button
-                    className="absolute right-0 bg-indigo-600 p-4 text-white hover:bg-indigo-500
-                      focus:bg-indigo-500 focus:shadow focus-visible:outline-none"
+                    className="absolute right-0 rounded-r-lg bg-indigo-600 p-4 text-white
+                      hover:bg-indigo-700 focus:bg-indigo-700 focus:outline-none focus-visible:ring
+                      focus-visible:ring-indigo-500/50 active:bg-indigo-800"
                     onClick={handleSearch}
                   >
                     <span className="sr-only">Search</span>

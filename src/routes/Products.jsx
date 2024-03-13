@@ -118,8 +118,9 @@ export default function Products() {
             <div className="mb-5 border-b" />
 
             <button
-              className="rounded bg-gray-500 px-8 py-2 text-sm font-bold text-white
-                hover:bg-gray-400 focus:outline-none focus:ring focus:ring-gray-400/50"
+              className="rounded bg-slate-500 px-8 py-2 text-sm font-bold text-white
+                hover:bg-slate-600 focus:outline-none focus:ring focus:ring-slate-400/50
+                active:bg-slate-700"
               onClick={resetFilters}
             >
               Reset
