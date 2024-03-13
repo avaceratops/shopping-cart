@@ -89,7 +89,7 @@ export default function Product() {
           </div>
 
           <div className="mb-6 xs:max-w-prose">
-            <Collapsible className={'py-6'} buttonText={'Description'}>
+            <Collapsible className={'py-6'} defaultOpen={true} buttonText={'Description'}>
               <p className="whitespace-pre-line text-gray-700">{desc}</p>
             </Collapsible>
           </div>
