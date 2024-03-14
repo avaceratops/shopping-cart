@@ -27,7 +27,7 @@ export default function SearchDialog() {
           active:bg-slate-700"
         onClick={() => setOpen(true)}
       >
-        <span className="sr-only">Search</span>
+        <span className="sr-only">Open search</span>
         <MagnifyingGlassIcon
           className="block h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-white
             group-focus:text-white"
@@ -76,7 +76,7 @@ export default function SearchDialog() {
                       focus-visible:ring-indigo-500/50 active:bg-indigo-800"
                     onClick={handleSearch}
                   >
-                    <span className="sr-only">Search</span>
+                    <span className="sr-only">Submit search</span>
                     <MagnifyingGlassIcon
                       className="pointer-events-none h-6 w-6"
                       aria-hidden="true"
