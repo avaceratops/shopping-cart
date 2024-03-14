@@ -16,26 +16,35 @@ it('renders button correctly', () => {
 it('displays panel text when button is clicked', async () => {
   const panelText = 'This is some panel text.';
   const user = userEvent.setup();
-  render(<Collapsible panelText={panelText} />);
+  render(
+    <Collapsible>
+      <p>{panelText}</p>
+    </Collapsible>
+  );
 
   const button = screen.getByRole('button');
   await user.click(button);
+  const closeButton = await screen.findByText('Close panel');
+  const text = await screen.findByText(panelText);
 
-  waitFor(() => {
-    expect(within(button).getByText('Close panel')).toBeInTheDocument();
-    expect(screen.getByText(panelText)).toBeInTheDocument();
-  });
+  expect(closeButton).toBeInTheDocument();
+  expect(text).toBeInTheDocument();
 });
 
 it('hides panel text when button is clicked again', async () => {
   const panelText = 'This is some panel text.';
   const user = userEvent.setup();
-  render(<Collapsible panelText={panelText} />);
+  render(
+    <Collapsible>
+      <p>{panelText}</p>
+    </Collapsible>
+  );
 
   const button = screen.getByRole('button');
   await user.click(button);
+  await screen.findByText('Close panel');
   await user.click(button);
+  await screen.findByText('Open panel');
 
-  expect(within(button).getByText('Open panel')).toBeInTheDocument();
   expect(screen.queryByText(panelText)).not.toBeInTheDocument();
 });
