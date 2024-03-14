@@ -6,15 +6,17 @@ exports[`renders cart item correctly 1`] = `
     class="flex py-6"
   >
     <div
-      class="flex h-24 w-24 flex-shrink-0 justify-center overflow-hidden rounded border"
+      class="h-24 w-24 flex-shrink-0 overflow-hidden rounded border"
     >
       <a
         href="/warhammer-40k/00001"
       >
         <img
           alt=""
-          class="h-full p-1"
+          class="p-1"
+          height="103"
           src="/images/warhammer-40k/https___trade.games-workshop.com_assets_2023_08_99120106064_NornAssimilatorStock.jpg--100.webp"
+          width="100"
         />
       </a>
     </div>
