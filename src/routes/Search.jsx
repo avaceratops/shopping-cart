@@ -9,7 +9,7 @@ import styles from '../styles/Select.module.scss';
 export default function Search() {
   const navigate = useNavigate();
   const { data, isLoading } = useOutletContext();
-  const products = Object.values(data).flatMap((products) => products);
+  const products = Object.values(data).flat();
   const [searchParams] = useSearchParams();
   const [sortMethod, setSortMethod] = useState('Best Selling');
   const query = searchParams.get('q');
