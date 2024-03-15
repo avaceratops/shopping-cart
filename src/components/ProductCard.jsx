@@ -9,10 +9,8 @@ export default function ProductCard({ product }) {
   const { id, name, price, faction, image, stock } = product;
   const game = getGameByProductId(id);
 
-  const handleClick = (e) => {
-    e.preventDefault();
-
-    addToCart(product, 1);
+  const handleAddToCart = () => {
+    return addToCart(product, 1);
   };
 
   return (
@@ -32,7 +30,7 @@ export default function ProductCard({ product }) {
         <h2 className="font-semibold">{name || 'Placeholder'}</h2>
         <h3 className="mb-4 text-sm text-gray-500">{faction || 'Unknown'}</h3>
         <StockIndicator stock={stock} />
-        <AddProductButton stock={stock} onClick={handleClick} />
+        <AddProductButton stock={stock} addToCart={handleAddToCart} />
       </article>
     </Link>
   );

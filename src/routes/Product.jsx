@@ -26,8 +26,8 @@ export default function Product() {
 
   const { id, name, price, faction, image, sku, stock, desc } = product;
 
-  const handleAddClick = () => {
-    addToCart(product, quantity);
+  const handleAddToCart = () => {
+    return addToCart(product, quantity);
   };
 
   const handleQuantityChange = (newValue) => {
@@ -85,7 +85,7 @@ export default function Product() {
           </div>
 
           <div className="mb-12 xs:max-w-72">
-            <AddProductButton stock={stock} onClick={handleAddClick} />
+            <AddProductButton stock={stock} addToCart={handleAddToCart} />
           </div>
 
           <div className="mb-6 xs:max-w-prose">

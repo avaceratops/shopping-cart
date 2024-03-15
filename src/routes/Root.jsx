@@ -19,7 +19,7 @@ export default function Root() {
       // prevent the user from ordering unavailable stock
       const currentQuantity = cart[index].quantity;
       if (currentQuantity + quantity > Math.min(product.stock, MAX_PURCHASE_QUANTITY)) {
-        return;
+        return false;
       }
 
       const newCart = [...cart];
@@ -28,6 +28,7 @@ export default function Root() {
     } else {
       setCart([...cart, { product, quantity }]);
     }
+    return true;
   }
 
   function updateCartItem(productId, quantity) {
