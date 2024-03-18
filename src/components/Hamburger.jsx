@@ -12,7 +12,9 @@ export default function Hamburger() {
   return (
     <>
       <button
-        className="rounded-md p-2 text-gray-400 hover:bg-gray-400 hover:text-white"
+        className="rounded-md p-2 text-gray-400 hover:bg-slate-600 hover:text-white
+          focus:bg-slate-600 focus:text-white focus:outline-none focus:ring focus:ring-slate-400/50
+          active:bg-slate-700"
         onClick={() => setOpen(true)}
       >
         <span className="sr-only">Open Menu</span>
