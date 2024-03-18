@@ -22,7 +22,7 @@ export default function ScrollToTop({ refScrollTop }) {
   };
 
   return (
-    <div className="fixed bottom-3 right-0 z-50 lg:hidden">
+    <div className="fixed bottom-10 right-0 z-50 lg:hidden">
       <Transition
         show={visible}
         enter="transition-opacity duration-300"
