@@ -1,5 +1,5 @@
 import { Dialog, Transition } from '@headlessui/react';
-import { Fragment, useState } from 'react';
+import { Fragment, useMemo, useState } from 'react';
 import { formatPrice } from '../utils/formatting';
 import CartButton from './CartButton';
 import CartItem from './CartItem';
@@ -8,8 +8,13 @@ import CloseButton from './CloseButton';
 export default function CartDialog({ cart, updateCartItem, removeFromCart }) {
   const [open, setOpen] = useState(false);
 
-  const totalQuantity = cart.reduce((acc, item) => acc + item.quantity, 0);
-  const totalPrice = cart.reduce((acc, item) => acc + item.product.price * item.quantity, 0);
+  const totalQuantity = useMemo(() => {
+    return cart.reduce((acc, item) => acc + item.quantity, 0);
+  }, [cart]);
+
+  const totalPrice = useMemo(() => {
+    return cart.reduce((acc, item) => acc + item.product.price * item.quantity, 0);
+  }, [cart]);
 
   function toggleCart() {
     setOpen(!open);
